@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM SIMPEL</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body class="index">
+    <nav>
+      <div class="container">
+        <h1>ATM SIMPLE</h1>
+      </div>
+    </nav>
+    <p class="error_message">{{ error_message }}</p>
+    <div class="container">
+      <div class="box">
+        <form action="/" method="post">
+          <input
+            type="number"
+            name="rekening"
+            id="rekening"
+            placeholder="Masukkan No Rekening"
+            required
+          />
+          <input
+            type="number"
+            name="pin"
+            id="pin"
+            placeholder="Masukkan No PIN"
+            required
+          />
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

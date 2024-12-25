@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM SIMPEL</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body class="home">
+    <div class="container">
+      <div class="box">
+        <h1>Selamat datang {{ name }}</h1>
+        <div class="account-information">
+          <h4>Informasi Akun</h4>
+          <p>Nama : {{ name }}</p>
+          <p>No Rekening : {{ no_rekening }}</p>
+          <p>Saldo : Rp{{ saldo }}</p>
+        </div>
+        <div class="button-group">
+          <button class="button">Tarik Tunai</button>
+          <button class="button">Setor Tunai</button>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
