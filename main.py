@@ -5,7 +5,7 @@ accounts = [
         "name": "Ahmad Irfansyah",
         "no_rekening": 12345678,
         "pin": 123456,
-        "saldo": 100000,
+        "saldo": 5000000000000,
     },
     {
         "name": "Setya Andi Wardana",
@@ -66,9 +66,19 @@ def login():
     return render_template("index.html")
 
 
+@app.route("/home/")
+def home():
+    return render_template("home.html")
+
+
 @app.route("/tarik-tunai/")
 def tarik_tunai():
     return render_template("tarik_tunai.html")
+
+
+@app.route("/setor-tunai/")
+def setor_tunai():
+    return render_template("setor_tunai.html")
 
 
 if __name__ == "__main__":
